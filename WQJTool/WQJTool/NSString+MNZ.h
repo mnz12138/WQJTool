@@ -13,6 +13,7 @@
 
 /*四舍五入,保留两位小数*/
 + (instancetype)formatFloat:(CGFloat)f;
+/*判断字符串是否为空(各种空)*/
 + (BOOL)isEmptyString:(NSString*)string;
 
 @end

@@ -6,8 +6,7 @@
 //  Copyright © 2017年 mnz. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-
-@interface WQJTool : NSObject
-
-@end
+#import "NSObject+MNZ.h"
+#import "NSNumber+MNZ.h"
+#import "NSString+MNZ.h"
+#import "NSAttributedString+MNZ.h"
