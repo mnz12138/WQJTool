@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		183F8E0A1FD5179600B0D4E4 /* UITableView+MNZ.m in Sources */ = {isa = PBXBuildFile; fileRef = 183F8E091FD5179600B0D4E4 /* UITableView+MNZ.m */; };
+		185DEE101FD94EC000157419 /* UIGestureRecognizer+Block.m in Sources */ = {isa = PBXBuildFile; fileRef = 185DEE0D1FD94EBF00157419 /* UIGestureRecognizer+Block.m */; };
+		185DEE111FD94EC000157419 /* UIView+ExtendTouchRect.m in Sources */ = {isa = PBXBuildFile; fileRef = 185DEE0E1FD94EC000157419 /* UIView+ExtendTouchRect.m */; };
 		18CA20B41FC3F681001EFFDC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CA20B31FC3F681001EFFDC /* AppDelegate.m */; };
 		18CA20B71FC3F681001EFFDC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CA20B61FC3F681001EFFDC /* ViewController.m */; };
 		18CA20BA1FC3F681001EFFDC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18CA20B81FC3F681001EFFDC /* Main.storyboard */; };
@@ -23,6 +25,10 @@
 /* Begin PBXFileReference section */
 		183F8E081FD5179600B0D4E4 /* UITableView+MNZ.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITableView+MNZ.h"; sourceTree = "<group>"; };
 		183F8E091FD5179600B0D4E4 /* UITableView+MNZ.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITableView+MNZ.m"; sourceTree = "<group>"; };
+		185DEE0C1FD94EBF00157419 /* UIView+ExtendTouchRect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ExtendTouchRect.h"; sourceTree = "<group>"; };
+		185DEE0D1FD94EBF00157419 /* UIGestureRecognizer+Block.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIGestureRecognizer+Block.m"; sourceTree = "<group>"; };
+		185DEE0E1FD94EC000157419 /* UIView+ExtendTouchRect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ExtendTouchRect.m"; sourceTree = "<group>"; };
+		185DEE0F1FD94EC000157419 /* UIGestureRecognizer+Block.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIGestureRecognizer+Block.h"; sourceTree = "<group>"; };
 		18CA20AF1FC3F681001EFFDC /* WQJTool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WQJTool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18CA20B21FC3F681001EFFDC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		18CA20B31FC3F681001EFFDC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -91,6 +97,10 @@
 		18CA20D41FC4034E001EFFDC /* WQJTool */ = {
 			isa = PBXGroup;
 			children = (
+				185DEE0F1FD94EC000157419 /* UIGestureRecognizer+Block.h */,
+				185DEE0D1FD94EBF00157419 /* UIGestureRecognizer+Block.m */,
+				185DEE0C1FD94EBF00157419 /* UIView+ExtendTouchRect.h */,
+				185DEE0E1FD94EC000157419 /* UIView+ExtendTouchRect.m */,
 				18CA20D51FC4034E001EFFDC /* NSAttributedString+MNZ.h */,
 				18CA20D61FC4034E001EFFDC /* NSAttributedString+MNZ.m */,
 				18CA20D71FC4034E001EFFDC /* NSNumber+MNZ.h */,
@@ -177,8 +187,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				185DEE111FD94EC000157419 /* UIView+ExtendTouchRect.m in Sources */,
 				18CA20B71FC3F681001EFFDC /* ViewController.m in Sources */,
 				18CA20C21FC3F681001EFFDC /* main.m in Sources */,
+				185DEE101FD94EC000157419 /* UIGestureRecognizer+Block.m in Sources */,
 				18CA20B41FC3F681001EFFDC /* AppDelegate.m in Sources */,
 				18CA20E01FC4034E001EFFDC /* NSString+MNZ.m in Sources */,
 				18CA20DE1FC4034E001EFFDC /* NSNumber+MNZ.m in Sources */,
