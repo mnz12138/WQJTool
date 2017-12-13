@@ -10,11 +10,40 @@
 
 @implementation NSString (MNZ)
 
-+ (instancetype)formatFloat:(CGFloat)f {
-    NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
-    formatter.maximumFractionDigits = 2;
-    formatter.minimumIntegerDigits = 1;
-    return [formatter stringFromNumber:@(f)];
++ (instancetype)formatNumber:(NSNumber *)number {
+    return [self formatNumber:number decimalCount:2];
+}
+
++ (NSString *)formatNumber:(NSNumber *)number decimalCount:(NSInteger)decimalCount{
+    double fdouble = [number doubleValue];
+    NSString *ftotal;
+    switch (decimalCount) {
+        case 1:
+            ftotal = [NSString stringWithFormat:@"%.1f", fdouble];
+            break;
+        case 2:
+            ftotal = [NSString stringWithFormat:@"%.2f", fdouble];
+            break;
+        case 3:
+            ftotal = [NSString stringWithFormat:@"%.3f", fdouble];
+            break;
+        case 4:
+            ftotal = [NSString stringWithFormat:@"%.4f", fdouble];
+            break;
+        case 5:
+            ftotal = [NSString stringWithFormat:@"%.5f", fdouble];
+            break;
+        default:
+            break;
+    }
+    while ([ftotal hasSuffix:@"0"]) {
+        ftotal = [ftotal substringToIndex:[ftotal length]-1];
+    }
+    
+    if ([ftotal hasSuffix:@"."]) {
+        ftotal = [ftotal substringToIndex:[ftotal length]-1];
+    }
+    return ftotal;
 }
 
 + (BOOL)isEmptyString:(NSString*)string {
