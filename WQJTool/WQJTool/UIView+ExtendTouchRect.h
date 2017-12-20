@@ -15,6 +15,7 @@
 
 @interface UIView (ExtendTouchRect)
 
+/*增加响应区域*/
 @property(nonatomic, assign) UIEdgeInsets touchExtendInset;
 
 @end

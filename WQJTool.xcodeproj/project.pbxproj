@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18238C0A1FEA315A0058F6D1 /* UIViewController+MNZ.m in Sources */ = {isa = PBXBuildFile; fileRef = 18238C041FEA31590058F6D1 /* UIViewController+MNZ.m */; };
+		18238C0B1FEA315A0058F6D1 /* UIResponder+Action.m in Sources */ = {isa = PBXBuildFile; fileRef = 18238C051FEA31590058F6D1 /* UIResponder+Action.m */; };
+		18238C0C1FEA315A0058F6D1 /* UITableViewCell+MNZ.m in Sources */ = {isa = PBXBuildFile; fileRef = 18238C081FEA315A0058F6D1 /* UITableViewCell+MNZ.m */; };
 		183F8E0A1FD5179600B0D4E4 /* UITableView+MNZ.m in Sources */ = {isa = PBXBuildFile; fileRef = 183F8E091FD5179600B0D4E4 /* UITableView+MNZ.m */; };
 		185DEE101FD94EC000157419 /* UIGestureRecognizer+Block.m in Sources */ = {isa = PBXBuildFile; fileRef = 185DEE0D1FD94EBF00157419 /* UIGestureRecognizer+Block.m */; };
 		185DEE111FD94EC000157419 /* UIView+ExtendTouchRect.m in Sources */ = {isa = PBXBuildFile; fileRef = 185DEE0E1FD94EC000157419 /* UIView+ExtendTouchRect.m */; };
@@ -23,6 +26,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		18238C041FEA31590058F6D1 /* UIViewController+MNZ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+MNZ.m"; sourceTree = "<group>"; };
+		18238C051FEA31590058F6D1 /* UIResponder+Action.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIResponder+Action.m"; sourceTree = "<group>"; };
+		18238C061FEA31590058F6D1 /* UIResponder+Action.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIResponder+Action.h"; sourceTree = "<group>"; };
+		18238C071FEA31590058F6D1 /* UITableViewCell+MNZ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+MNZ.h"; sourceTree = "<group>"; };
+		18238C081FEA315A0058F6D1 /* UITableViewCell+MNZ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+MNZ.m"; sourceTree = "<group>"; };
+		18238C091FEA315A0058F6D1 /* UIViewController+MNZ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+MNZ.h"; sourceTree = "<group>"; };
 		183F8E081FD5179600B0D4E4 /* UITableView+MNZ.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITableView+MNZ.h"; sourceTree = "<group>"; };
 		183F8E091FD5179600B0D4E4 /* UITableView+MNZ.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITableView+MNZ.m"; sourceTree = "<group>"; };
 		185DEE0C1FD94EBF00157419 /* UIView+ExtendTouchRect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ExtendTouchRect.h"; sourceTree = "<group>"; };
@@ -97,6 +106,12 @@
 		18CA20D41FC4034E001EFFDC /* WQJTool */ = {
 			isa = PBXGroup;
 			children = (
+				18238C061FEA31590058F6D1 /* UIResponder+Action.h */,
+				18238C051FEA31590058F6D1 /* UIResponder+Action.m */,
+				18238C071FEA31590058F6D1 /* UITableViewCell+MNZ.h */,
+				18238C081FEA315A0058F6D1 /* UITableViewCell+MNZ.m */,
+				18238C091FEA315A0058F6D1 /* UIViewController+MNZ.h */,
+				18238C041FEA31590058F6D1 /* UIViewController+MNZ.m */,
 				185DEE0F1FD94EC000157419 /* UIGestureRecognizer+Block.h */,
 				185DEE0D1FD94EBF00157419 /* UIGestureRecognizer+Block.m */,
 				185DEE0C1FD94EBF00157419 /* UIView+ExtendTouchRect.h */,
@@ -190,6 +205,9 @@
 				185DEE111FD94EC000157419 /* UIView+ExtendTouchRect.m in Sources */,
 				18CA20B71FC3F681001EFFDC /* ViewController.m in Sources */,
 				18CA20C21FC3F681001EFFDC /* main.m in Sources */,
+				18238C0A1FEA315A0058F6D1 /* UIViewController+MNZ.m in Sources */,
+				18238C0C1FEA315A0058F6D1 /* UITableViewCell+MNZ.m in Sources */,
+				18238C0B1FEA315A0058F6D1 /* UIResponder+Action.m in Sources */,
 				185DEE101FD94EC000157419 /* UIGestureRecognizer+Block.m in Sources */,
 				18CA20B41FC3F681001EFFDC /* AppDelegate.m in Sources */,
 				18CA20E01FC4034E001EFFDC /* NSString+MNZ.m in Sources */,

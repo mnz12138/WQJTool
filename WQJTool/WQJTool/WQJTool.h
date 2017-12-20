@@ -10,3 +10,11 @@
 #import "NSNumber+MNZ.h"
 #import "NSString+MNZ.h"
 #import "NSAttributedString+MNZ.h"
+
+#import "UIResponder+Action.h"
+#import "UIView+ExtendTouchRect.h"
+#import "UIViewController+MNZ.h"
+#import "UITableView+MNZ.h"
+#import "UITableViewCell+MNZ.h"
+#import "UIGestureRecognizer+Block.h"
+

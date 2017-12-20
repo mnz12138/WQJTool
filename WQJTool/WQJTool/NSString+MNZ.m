@@ -33,6 +33,9 @@
         case 5:
             ftotal = [NSString stringWithFormat:@"%.5f", fdouble];
             break;
+        case 6:
+            ftotal = [NSString stringWithFormat:@"%.6f", fdouble];
+            break;
         default:
             break;
     }
