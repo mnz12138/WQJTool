@@ -9,15 +9,15 @@
 #import "UIResponder+Action.h"
 #import <objc/runtime.h>
 
-static NSString *delegateKey = @"delegateKey";
+static const int delegate_key;
 @implementation UIResponder (Action)
 
 - (void)setDelegate:(id<MNZActionProtocol>)delegate {
-    objc_setAssociatedObject(self, &delegateKey, delegate, OBJC_ASSOCIATION_ASSIGN);
+    objc_setAssociatedObject(self, &delegate_key, delegate, OBJC_ASSOCIATION_ASSIGN);
 }
 
 - (id<MNZActionProtocol>)delegate {
-    return objc_getAssociatedObject(self, &delegateKey);
+    return objc_getAssociatedObject(self, &delegate_key);
 }
 
 - (void)actionName:(NSString *)name sender:(id)sender object:(id)object {
