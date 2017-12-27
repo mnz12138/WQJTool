@@ -10,7 +10,7 @@
 
 @interface UITableViewCell (MNZ)
 
-/*简便获取cell方法，重用identifier是ClassName*/
+/**简便获取cell方法，重用identifier是ClassName*/
 + (instancetype)cellForTableView:(UITableView *)tableView;
 
 @end

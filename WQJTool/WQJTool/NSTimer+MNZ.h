@@ -10,9 +10,9 @@
 
 @interface NSTimer (MNZ)
 
-/*timer的block*/
+/**timer的block*/
 + (NSTimer *)scheduledTimerWithTimeInterval:(NSTimeInterval)seconds block:(void (^)(NSTimer *timer))block repeats:(BOOL)repeats;
-/*timer的block*/
+/**timer的block*/
 + (NSTimer *)timerWithTimeInterval:(NSTimeInterval)seconds block:(void (^)(NSTimer *timer))block repeats:(BOOL)repeats;
 
 @end

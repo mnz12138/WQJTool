@@ -10,7 +10,7 @@
 
 @interface UIViewController (MNZ)
 
-/*获取最顶部控制器*/
+/**获取最顶部控制器*/
 + (instancetype)getLastActivityController;
 
 @end

@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-/*
+/**
  For example:
  button.touchExtendInset = UIEdgeInsetsMake(-10, -10, -10, -10);
  */

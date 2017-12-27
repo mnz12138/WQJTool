@@ -17,7 +17,7 @@
  *  @param swizzledSelector 自己实现的SEL
  */
 + (void)swizzleMethod:(SEL)originalSelector andAnotherSelecor:(SEL)swizzledSelector;
-/*判断对象是否为空(各种空)*/
+/**判断对象是否为空(各种空)*/
 + (BOOL)isEmptyObject:(id)object;
 
 @end

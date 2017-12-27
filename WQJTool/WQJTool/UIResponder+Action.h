@@ -14,8 +14,8 @@
 
 @interface UIResponder (Action) <MNZActionProtocol>
 @property (nonatomic, weak) id<MNZActionProtocol> delegate;
-/*通知代理响应*/
+/**通知代理响应*/
 - (void)callActionName:(NSString *)name sender:(id)sender object:(id)object;
-/*沿着响应链传递*/
+/**沿着响应链传递*/
 - (void)callEventName:(NSString *)eventName sender:(id)sender object:(id)object;
 @end

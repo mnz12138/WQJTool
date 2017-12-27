@@ -10,7 +10,7 @@
 
 typedef void(^GestureBlock)(id gestureRecognizer);
 
-/*
+/**
  For example:
  [view addGestureRecognizer:[UITapGestureRecognizer gestureRecognizerWithActionBlock:^(id gestureRecognizer) {
     //...

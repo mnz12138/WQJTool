@@ -7,6 +7,7 @@
 //
 
 #import "NSString+MNZ.h"
+#import <UIKit/UIKit.h>
 
 @implementation NSString (MNZ)
 
@@ -56,6 +57,20 @@
         return YES;
     }
     return NO;
+}
+
++ (NSString *)getLaunchImageName {
+    CGSize viewSize = [[UIScreen mainScreen] bounds].size;
+    NSString *viewOrientation = @"Portrait";//横屏请设置成 @"Landscape"
+    NSString *launchImage = nil;
+    NSArray* imagesDict = [[[NSBundle mainBundle] infoDictionary] valueForKey:@"UILaunchImages"];
+    for (NSDictionary* dict in imagesDict) {
+        CGSize imageSize = CGSizeFromString(dict[@"UILaunchImageSize"]);
+        if (CGSizeEqualToSize(imageSize, viewSize) && [viewOrientation isEqualToString:dict[@"UILaunchImageOrientation"]]) {
+            launchImage = dict[@"UILaunchImageName"];
+        }
+    }
+    return launchImage;
 }
 
 @end

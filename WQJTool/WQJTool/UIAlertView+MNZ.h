@@ -11,6 +11,7 @@
 typedef void(^CompletionHandler)(UIAlertView *alert, NSUInteger buttonIndex);
 @interface UIAlertView (MNZ) <UIAlertViewDelegate>
 
+/**显示UIAlertView*/
 - (void)showWithHandler:(CompletionHandler)handler;
 
 @end
