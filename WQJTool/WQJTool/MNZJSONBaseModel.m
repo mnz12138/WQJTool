@@ -47,6 +47,11 @@
         Class class = nil;
         if ([dict[key] isKindOfClass:[NSString class]]) {
             class = NSClassFromString(dict[key]);
+        }else{
+            class = dict[key];
+        }
+        if (class==nil) {
+            return;
         }
         NSMutableArray *array = [NSMutableArray array];
         for (NSDictionary *memberDict in value) {
