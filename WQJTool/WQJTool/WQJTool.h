@@ -18,3 +18,5 @@
 #import "UITableViewCell+MNZ.h"
 #import "UIGestureRecognizer+Block.h"
 
+#import "MNZJSONBaseModel.h"
+
