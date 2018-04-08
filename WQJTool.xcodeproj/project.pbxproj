@@ -15,7 +15,7 @@
 		185A45E31FEB897D0043914D /* UIAlertView+MNZ.m in Sources */ = {isa = PBXBuildFile; fileRef = 185A45E21FEB897D0043914D /* UIAlertView+MNZ.m */; };
 		185DEE101FD94EC000157419 /* UIGestureRecognizer+Block.m in Sources */ = {isa = PBXBuildFile; fileRef = 185DEE0D1FD94EBF00157419 /* UIGestureRecognizer+Block.m */; };
 		185DEE111FD94EC000157419 /* UIView+ExtendTouchRect.m in Sources */ = {isa = PBXBuildFile; fileRef = 185DEE0E1FD94EC000157419 /* UIView+ExtendTouchRect.m */; };
-		1869421E2079E45300DB4C54 /* MNZJSONBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1869421C2079E45200DB4C54 /* MNZJSONBaseModel.m */; };
+		18694224207A043900DB4C54 /* NSObject+JSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 18694223207A043900DB4C54 /* NSObject+JSON.m */; };
 		18CA20B41FC3F681001EFFDC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CA20B31FC3F681001EFFDC /* AppDelegate.m */; };
 		18CA20B71FC3F681001EFFDC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CA20B61FC3F681001EFFDC /* ViewController.m */; };
 		18CA20BA1FC3F681001EFFDC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18CA20B81FC3F681001EFFDC /* Main.storyboard */; };
@@ -45,8 +45,8 @@
 		185DEE0D1FD94EBF00157419 /* UIGestureRecognizer+Block.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIGestureRecognizer+Block.m"; sourceTree = "<group>"; };
 		185DEE0E1FD94EC000157419 /* UIView+ExtendTouchRect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ExtendTouchRect.m"; sourceTree = "<group>"; };
 		185DEE0F1FD94EC000157419 /* UIGestureRecognizer+Block.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIGestureRecognizer+Block.h"; sourceTree = "<group>"; };
-		1869421C2079E45200DB4C54 /* MNZJSONBaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MNZJSONBaseModel.m; sourceTree = "<group>"; };
-		1869421D2079E45200DB4C54 /* MNZJSONBaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MNZJSONBaseModel.h; sourceTree = "<group>"; };
+		18694222207A043900DB4C54 /* NSObject+JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+JSON.h"; sourceTree = "<group>"; };
+		18694223207A043900DB4C54 /* NSObject+JSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+JSON.m"; sourceTree = "<group>"; };
 		18CA20AF1FC3F681001EFFDC /* WQJTool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WQJTool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18CA20B21FC3F681001EFFDC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		18CA20B31FC3F681001EFFDC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -115,8 +115,8 @@
 		18CA20D41FC4034E001EFFDC /* WQJTool */ = {
 			isa = PBXGroup;
 			children = (
-				1869421D2079E45200DB4C54 /* MNZJSONBaseModel.h */,
-				1869421C2079E45200DB4C54 /* MNZJSONBaseModel.m */,
+				18694222207A043900DB4C54 /* NSObject+JSON.h */,
+				18694223207A043900DB4C54 /* NSObject+JSON.m */,
 				18238C061FEA31590058F6D1 /* UIResponder+Action.h */,
 				18238C051FEA31590058F6D1 /* UIResponder+Action.m */,
 				18238C071FEA31590058F6D1 /* UITableViewCell+MNZ.h */,
@@ -224,8 +224,8 @@
 				18238C0C1FEA315A0058F6D1 /* UITableViewCell+MNZ.m in Sources */,
 				18238C0B1FEA315A0058F6D1 /* UIResponder+Action.m in Sources */,
 				185DEE101FD94EC000157419 /* UIGestureRecognizer+Block.m in Sources */,
+				18694224207A043900DB4C54 /* NSObject+JSON.m in Sources */,
 				18CA20B41FC3F681001EFFDC /* AppDelegate.m in Sources */,
-				1869421E2079E45300DB4C54 /* MNZJSONBaseModel.m in Sources */,
 				185A45E31FEB897D0043914D /* UIAlertView+MNZ.m in Sources */,
 				18CA20E01FC4034E001EFFDC /* NSString+MNZ.m in Sources */,
 				18CA20DE1FC4034E001EFFDC /* NSNumber+MNZ.m in Sources */,
