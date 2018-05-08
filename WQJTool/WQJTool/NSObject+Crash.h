@@ -11,3 +11,10 @@
 @interface NSObject (Crash)
 
 @end
+
+@interface NSObject_KVO_Info: NSObject
+
+@property (nonatomic, weak) NSMutableDictionary *myKvoInfoMaps;
+@property (nonatomic, weak) NSObject *observer;
+
+@end
