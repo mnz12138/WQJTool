@@ -9,7 +9,7 @@
 #import "UIResponder+Action.h"
 #import <objc/runtime.h>
 
-static const int delegate_key;
+static const char delegate_key;
 @implementation UIResponder (Action)
 
 - (void)setDelegate:(id<MNZActionProtocol>)delegate {

@@ -10,7 +10,16 @@
 		18238C0A1FEA315A0058F6D1 /* UIViewController+MNZ.m in Sources */ = {isa = PBXBuildFile; fileRef = 18238C041FEA31590058F6D1 /* UIViewController+MNZ.m */; };
 		18238C0B1FEA315A0058F6D1 /* UIResponder+Action.m in Sources */ = {isa = PBXBuildFile; fileRef = 18238C051FEA31590058F6D1 /* UIResponder+Action.m */; };
 		18238C0C1FEA315A0058F6D1 /* UITableViewCell+MNZ.m in Sources */ = {isa = PBXBuildFile; fileRef = 18238C081FEA315A0058F6D1 /* UITableViewCell+MNZ.m */; };
+		18264D9220A01F63003173B1 /* NSNotificationCenter+Crash.m in Sources */ = {isa = PBXBuildFile; fileRef = 18264D9120A01F63003173B1 /* NSNotificationCenter+Crash.m */; };
 		183F8E0A1FD5179600B0D4E4 /* UITableView+MNZ.m in Sources */ = {isa = PBXBuildFile; fileRef = 183F8E091FD5179600B0D4E4 /* UITableView+MNZ.m */; };
+		18449C4420A0264900E8CCB1 /* NSObject+Crash.m in Sources */ = {isa = PBXBuildFile; fileRef = 18449C4320A0264900E8CCB1 /* NSObject+Crash.m */; };
+		18449C4720A028A000E8CCB1 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18449C4620A028A000E8CCB1 /* DetailViewController.m */; };
+		18449C4A20A02E7E00E8CCB1 /* NSTimer+Crash.m in Sources */ = {isa = PBXBuildFile; fileRef = 18449C4920A02E7E00E8CCB1 /* NSTimer+Crash.m */; };
+		18449C4D20A0479000E8CCB1 /* UIView+Crash.m in Sources */ = {isa = PBXBuildFile; fileRef = 18449C4C20A0479000E8CCB1 /* UIView+Crash.m */; };
+		18449C5020A0492800E8CCB1 /* NSArray+Crash.m in Sources */ = {isa = PBXBuildFile; fileRef = 18449C4F20A0492800E8CCB1 /* NSArray+Crash.m */; };
+		18449C5320A05CD800E8CCB1 /* NSDictionary+Crash.m in Sources */ = {isa = PBXBuildFile; fileRef = 18449C5220A05CD800E8CCB1 /* NSDictionary+Crash.m */; };
+		18449C5620A0602100E8CCB1 /* NSMutableArray+Crash.m in Sources */ = {isa = PBXBuildFile; fileRef = 18449C5520A0602100E8CCB1 /* NSMutableArray+Crash.m */; };
+		18449C5920A0614600E8CCB1 /* NSMutableDictionary+Crash.m in Sources */ = {isa = PBXBuildFile; fileRef = 18449C5820A0614600E8CCB1 /* NSMutableDictionary+Crash.m */; };
 		185A45E01FEB884C0043914D /* NSTimer+MNZ.m in Sources */ = {isa = PBXBuildFile; fileRef = 185A45DF1FEB884C0043914D /* NSTimer+MNZ.m */; };
 		185A45E31FEB897D0043914D /* UIAlertView+MNZ.m in Sources */ = {isa = PBXBuildFile; fileRef = 185A45E21FEB897D0043914D /* UIAlertView+MNZ.m */; };
 		185DEE101FD94EC000157419 /* UIGestureRecognizer+Block.m in Sources */ = {isa = PBXBuildFile; fileRef = 185DEE0D1FD94EBF00157419 /* UIGestureRecognizer+Block.m */; };
@@ -35,8 +44,26 @@
 		18238C071FEA31590058F6D1 /* UITableViewCell+MNZ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+MNZ.h"; sourceTree = "<group>"; };
 		18238C081FEA315A0058F6D1 /* UITableViewCell+MNZ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+MNZ.m"; sourceTree = "<group>"; };
 		18238C091FEA315A0058F6D1 /* UIViewController+MNZ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+MNZ.h"; sourceTree = "<group>"; };
+		18264D9020A01F63003173B1 /* NSNotificationCenter+Crash.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSNotificationCenter+Crash.h"; sourceTree = "<group>"; };
+		18264D9120A01F63003173B1 /* NSNotificationCenter+Crash.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSNotificationCenter+Crash.m"; sourceTree = "<group>"; };
 		183F8E081FD5179600B0D4E4 /* UITableView+MNZ.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITableView+MNZ.h"; sourceTree = "<group>"; };
 		183F8E091FD5179600B0D4E4 /* UITableView+MNZ.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITableView+MNZ.m"; sourceTree = "<group>"; };
+		18449C4220A0264900E8CCB1 /* NSObject+Crash.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+Crash.h"; sourceTree = "<group>"; };
+		18449C4320A0264900E8CCB1 /* NSObject+Crash.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Crash.m"; sourceTree = "<group>"; };
+		18449C4520A028A000E8CCB1 /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		18449C4620A028A000E8CCB1 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		18449C4820A02E7E00E8CCB1 /* NSTimer+Crash.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSTimer+Crash.h"; sourceTree = "<group>"; };
+		18449C4920A02E7E00E8CCB1 /* NSTimer+Crash.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+Crash.m"; sourceTree = "<group>"; };
+		18449C4B20A0479000E8CCB1 /* UIView+Crash.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Crash.h"; sourceTree = "<group>"; };
+		18449C4C20A0479000E8CCB1 /* UIView+Crash.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Crash.m"; sourceTree = "<group>"; };
+		18449C4E20A0492800E8CCB1 /* NSArray+Crash.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+Crash.h"; sourceTree = "<group>"; };
+		18449C4F20A0492800E8CCB1 /* NSArray+Crash.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Crash.m"; sourceTree = "<group>"; };
+		18449C5120A05CD800E8CCB1 /* NSDictionary+Crash.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Crash.h"; sourceTree = "<group>"; };
+		18449C5220A05CD800E8CCB1 /* NSDictionary+Crash.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Crash.m"; sourceTree = "<group>"; };
+		18449C5420A0602100E8CCB1 /* NSMutableArray+Crash.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+Crash.h"; sourceTree = "<group>"; };
+		18449C5520A0602100E8CCB1 /* NSMutableArray+Crash.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+Crash.m"; sourceTree = "<group>"; };
+		18449C5720A0614600E8CCB1 /* NSMutableDictionary+Crash.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+Crash.h"; sourceTree = "<group>"; };
+		18449C5820A0614600E8CCB1 /* NSMutableDictionary+Crash.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+Crash.m"; sourceTree = "<group>"; };
 		185A45DE1FEB884C0043914D /* NSTimer+MNZ.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSTimer+MNZ.h"; sourceTree = "<group>"; };
 		185A45DF1FEB884C0043914D /* NSTimer+MNZ.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+MNZ.m"; sourceTree = "<group>"; };
 		185A45E11FEB897D0043914D /* UIAlertView+MNZ.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+MNZ.h"; sourceTree = "<group>"; };
@@ -103,6 +130,8 @@
 				18CA20B31FC3F681001EFFDC /* AppDelegate.m */,
 				18CA20B51FC3F681001EFFDC /* ViewController.h */,
 				18CA20B61FC3F681001EFFDC /* ViewController.m */,
+				18449C4520A028A000E8CCB1 /* DetailViewController.h */,
+				18449C4620A028A000E8CCB1 /* DetailViewController.m */,
 				18CA20B81FC3F681001EFFDC /* Main.storyboard */,
 				18CA20BB1FC3F681001EFFDC /* Assets.xcassets */,
 				18CA20BD1FC3F681001EFFDC /* LaunchScreen.storyboard */,
@@ -141,6 +170,22 @@
 				185A45DF1FEB884C0043914D /* NSTimer+MNZ.m */,
 				185A45E11FEB897D0043914D /* UIAlertView+MNZ.h */,
 				185A45E21FEB897D0043914D /* UIAlertView+MNZ.m */,
+				18264D9020A01F63003173B1 /* NSNotificationCenter+Crash.h */,
+				18264D9120A01F63003173B1 /* NSNotificationCenter+Crash.m */,
+				18449C4220A0264900E8CCB1 /* NSObject+Crash.h */,
+				18449C4320A0264900E8CCB1 /* NSObject+Crash.m */,
+				18449C4820A02E7E00E8CCB1 /* NSTimer+Crash.h */,
+				18449C4920A02E7E00E8CCB1 /* NSTimer+Crash.m */,
+				18449C4B20A0479000E8CCB1 /* UIView+Crash.h */,
+				18449C4C20A0479000E8CCB1 /* UIView+Crash.m */,
+				18449C4E20A0492800E8CCB1 /* NSArray+Crash.h */,
+				18449C4F20A0492800E8CCB1 /* NSArray+Crash.m */,
+				18449C5420A0602100E8CCB1 /* NSMutableArray+Crash.h */,
+				18449C5520A0602100E8CCB1 /* NSMutableArray+Crash.m */,
+				18449C5120A05CD800E8CCB1 /* NSDictionary+Crash.h */,
+				18449C5220A05CD800E8CCB1 /* NSDictionary+Crash.m */,
+				18449C5720A0614600E8CCB1 /* NSMutableDictionary+Crash.h */,
+				18449C5820A0614600E8CCB1 /* NSMutableDictionary+Crash.m */,
 				18CA20E11FC41276001EFFDC /* WQJTool.h */,
 			);
 			path = WQJTool;
@@ -220,18 +265,27 @@
 				185DEE111FD94EC000157419 /* UIView+ExtendTouchRect.m in Sources */,
 				18CA20B71FC3F681001EFFDC /* ViewController.m in Sources */,
 				18CA20C21FC3F681001EFFDC /* main.m in Sources */,
+				18449C4420A0264900E8CCB1 /* NSObject+Crash.m in Sources */,
 				18238C0A1FEA315A0058F6D1 /* UIViewController+MNZ.m in Sources */,
+				18449C5920A0614600E8CCB1 /* NSMutableDictionary+Crash.m in Sources */,
 				18238C0C1FEA315A0058F6D1 /* UITableViewCell+MNZ.m in Sources */,
+				18449C4D20A0479000E8CCB1 /* UIView+Crash.m in Sources */,
+				18449C5620A0602100E8CCB1 /* NSMutableArray+Crash.m in Sources */,
+				18449C5320A05CD800E8CCB1 /* NSDictionary+Crash.m in Sources */,
 				18238C0B1FEA315A0058F6D1 /* UIResponder+Action.m in Sources */,
+				18264D9220A01F63003173B1 /* NSNotificationCenter+Crash.m in Sources */,
 				185DEE101FD94EC000157419 /* UIGestureRecognizer+Block.m in Sources */,
+				18449C4720A028A000E8CCB1 /* DetailViewController.m in Sources */,
 				18694224207A043900DB4C54 /* NSObject+JSON.m in Sources */,
 				18CA20B41FC3F681001EFFDC /* AppDelegate.m in Sources */,
+				18449C4A20A02E7E00E8CCB1 /* NSTimer+Crash.m in Sources */,
 				185A45E31FEB897D0043914D /* UIAlertView+MNZ.m in Sources */,
 				18CA20E01FC4034E001EFFDC /* NSString+MNZ.m in Sources */,
 				18CA20DE1FC4034E001EFFDC /* NSNumber+MNZ.m in Sources */,
 				183F8E0A1FD5179600B0D4E4 /* UITableView+MNZ.m in Sources */,
 				18CA20DD1FC4034E001EFFDC /* NSAttributedString+MNZ.m in Sources */,
 				185A45E01FEB884C0043914D /* NSTimer+MNZ.m in Sources */,
+				18449C5020A0492800E8CCB1 /* NSArray+Crash.m in Sources */,
 				18CA20DF1FC4034E001EFFDC /* NSObject+MNZ.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

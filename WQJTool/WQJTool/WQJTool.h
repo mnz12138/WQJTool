@@ -18,5 +18,15 @@
 #import "UITableViewCell+MNZ.h"
 #import "UIGestureRecognizer+Block.h"
 
-#import "MNZJSONBaseModel.h"
+#import "NSObject+JSON.h"
+
+//crash 防护方案
+#import "NSNotificationCenter+Crash.h"
+#import "NSObject+Crash.h"
+#import "NSTimer+Crash.h"
+#import "UIView+Crash.h"
+#import "NSArray+Crash.h"
+#import "NSMutableArray+Crash.h"
+#import "NSDictionary+Crash.h"
+#import "NSMutableDictionary+Crash.h"
 
