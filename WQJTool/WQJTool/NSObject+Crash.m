@@ -12,12 +12,11 @@
 
 @interface NSObject ()
 
-@property (nonatomic, strong) NSMutableDictionary *kvoInfoMaps;
+@property (nonatomic, strong) NSObject *kvoInfo;
 
 @end
 
 static const char kvo_key;
-static const char delegate_key;
 @implementation NSObject (Crash)
 
 static void addMethodForMyClass(id self, SEL _cmd) {
@@ -46,8 +45,8 @@ static void addMethodForMyClass(id self, SEL _cmd) {
     [self swizzleMethod:@selector(forwardingTargetForSelector:) andAnotherSelecor:@selector(mnz_forwardingTargetForSelector:)];
     [self swizzleMethod:NSSelectorFromString(@"dealloc") andAnotherSelecor:@selector(mnz_dealloc)];
     
-//    [self swizzleMethod:@selector(addObserver:forKeyPath:options:context:) andAnotherSelecor:@selector(mnz_addObserver:forKeyPath:options:context:)];
-//    [self swizzleMethod:@selector(removeObserver:forKeyPath:) andAnotherSelecor:@selector(mnz_removeObserver:forKeyPath:)];
+    [self swizzleMethod:@selector(addObserver:forKeyPath:options:context:) andAnotherSelecor:@selector(mnz_addObserver:forKeyPath:options:context:)];
+    [self swizzleMethod:@selector(removeObserver:forKeyPath:) andAnotherSelecor:@selector(mnz_removeObserver:forKeyPath:)];
 }
 //Unrecognized Selector类型crash防护，可以记录日志，便于修改bug
 - (id)mnz_forwardingTargetForSelector:(SEL)aSelector {
@@ -84,66 +83,30 @@ static void addMethodForMyClass(id self, SEL _cmd) {
     if ([self obj_flag]==OBJECTENUMFLAGNOTIFICATION) {
         [[NSNotificationCenter defaultCenter] removeObserver:self];
     }
-//    for (NSString *keyPath in self.kvoInfoMaps.allKeys) {
-//        NSObject_KVO_Info *kvoInfo = [self.kvoInfoMaps valueForKey:keyPath];
-//        [self removeObserver:kvoInfo.observer forKeyPath:keyPath];
-//    }
     [self mnz_dealloc];
 }
 
 //KVO防护
 - (void)mnz_addObserver:(NSObject *)observer forKeyPath:(NSString *)keyPath options:(NSKeyValueObservingOptions)options context:(void *)context {
-    if ([[self.kvoInfoMaps allKeys] containsObject:keyPath]) {
-        NSMutableArray *infoArray = [self.kvoInfoMaps objectForKey:keyPath];
-        __block BOOL isExist = NO;
-        [infoArray enumerateObjectsUsingBlock:^(NSObject_KVO_Info * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-            if (obj.observer==observer) {
-                isExist = YES;
-                *stop = YES;
-            }
-        }];
-        if (isExist==NO) {
-            NSObject_KVO_Info *kvoInfo = [[NSObject_KVO_Info alloc] init];
-            kvoInfo.observer = observer;
-            kvoInfo.myKvoInfoMaps = self.kvoInfoMaps;
-            [infoArray addObject:kvoInfo];
-        }
-    }else{
-        NSMutableArray *infoArray = [NSMutableArray array];
-        NSObject_KVO_Info *kvoInfo = [[NSObject_KVO_Info alloc] init];
-        kvoInfo.observer = observer;
-        kvoInfo.myKvoInfoMaps = self.kvoInfoMaps;
-        [infoArray addObject:kvoInfo];
-        [self mnz_addObserver:kvoInfo forKeyPath:keyPath options:options context:context];
-    }
+    NSObject_KVO_Info *kvoInfo = [[NSObject_KVO_Info alloc] init];
+    kvoInfo.observer = observer;
+    self.kvoInfo = kvoInfo;
+    [self mnz_addObserver:kvoInfo forKeyPath:keyPath options:options context:context];
 }
 
 - (void)mnz_removeObserver:(NSObject *)observer forKeyPath:(NSString *)keyPath {
-    NSMutableArray *infoArray = [self.kvoInfoMaps objectForKey:keyPath];
-    if ([infoArray count]>0) {
-        NSMutableArray *tempArray = [NSMutableArray array];
-        [infoArray enumerateObjectsUsingBlock:^(NSObject_KVO_Info * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-            if (obj.observer==observer||obj.observer==nil) {
-                [tempArray addObject:obj];
-            }
-        }];
-        [infoArray removeObjectsInArray:tempArray];
-        if ([infoArray count]==0) {
-            [self.kvoInfoMaps removeObjectForKey:keyPath];
-        }
-    }
+    //防止多次移除出现奔溃
+    @try {
+        [self mnz_removeObserver:observer forKeyPath:keyPath];
+    } @catch (NSException *exception) {}
 }
 
-- (void)setKvoInfoMaps:(NSMutableDictionary *)kvoInfoMaps {
-    objc_setAssociatedObject(self, &kvo_key, kvoInfoMaps, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+- (NSObject *)kvoInfo {
+    return objc_getAssociatedObject(self, &kvo_key);
 }
 
-- (NSMutableDictionary *)kvoInfoMaps {
-    NSMutableDictionary *dict = objc_getAssociatedObject(self, &kvo_key);
-    if (dict==nil) {
-        dict = [[NSMutableDictionary alloc] init];
-    }
-    return dict;
+- (void)setKvoInfo:(NSObject *)kvoInfo {
+    objc_setAssociatedObject(self, &kvo_key, kvoInfo, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 @end
@@ -151,16 +114,11 @@ static void addMethodForMyClass(id self, SEL _cmd) {
 
 @implementation NSObject_KVO_Info
 
-+ (void)load {
-    [self swizzleMethod:@selector(observeValueForKeyPath:ofObject:change:context:) andAnotherSelecor:@selector(mnz_observeValueForKeyPath:ofObject:change:context:)];
-}
-
-- (void)mnz_observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
     if (self.observer!=nil) {
         [self.observer observeValueForKeyPath:keyPath ofObject:object change:change context:context];
     }else{
-        NSMutableArray *infoArray = [self.myKvoInfoMaps objectForKey:keyPath];
-        [infoArray removeObject:self];
+        [object removeObserver:self forKeyPath:keyPath];
     }
 }
 

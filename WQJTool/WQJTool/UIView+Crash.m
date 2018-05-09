@@ -12,9 +12,16 @@
 @implementation UIView (Crash)
 
 + (void)load {
+    [self swizzleClassMethod:@selector(addSubview:) andAnotherSelecor:@selector(mnz_addSubview:)];
     [self swizzleClassMethod:@selector(setNeedsLayout) andAnotherSelecor:@selector(mnz_setNeedsLayout)];
     [self swizzleClassMethod:@selector(setNeedsDisplay) andAnotherSelecor:@selector(mnz_setNeedsDisplay)];
     [self swizzleClassMethod:@selector(setNeedsDisplayInRect:) andAnotherSelecor:@selector(mnz_setNeedsDisplayInRect:)];
+}
+
+- (void)mnz_addSubview:(UIView *)view {
+    if (self!=view) {
+        [self mnz_addSubview:view];
+    }
 }
 
 - (void)mnz_setNeedsLayout {
