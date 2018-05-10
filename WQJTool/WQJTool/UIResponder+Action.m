@@ -12,11 +12,11 @@
 static const char delegate_key;
 @implementation UIResponder (Action)
 
-- (void)setDelegate:(id<MNZActionProtocol>)delegate {
-    objc_setAssociatedObject(self, &delegate_key, delegate, OBJC_ASSOCIATION_ASSIGN);
+- (void)setAction_delegate:(id<MNZActionProtocol>)action_delegate {
+    objc_setAssociatedObject(self, &delegate_key, action_delegate, OBJC_ASSOCIATION_ASSIGN);
 }
 
-- (id<MNZActionProtocol>)delegate {
+- (id<MNZActionProtocol>)action_delegate {
     return objc_getAssociatedObject(self, &delegate_key);
 }
 
@@ -25,8 +25,8 @@ static const char delegate_key;
 }
 
 - (void)callActionName:(NSString *)name sender:(id)sender object:(id)object {
-    if ([self.delegate respondsToSelector:@selector(actionName:sender:object:)]) {
-        [self.delegate actionName:name sender:sender object:object];
+    if ([self.action_delegate respondsToSelector:@selector(actionName:sender:object:)]) {
+        [self.action_delegate actionName:name sender:sender object:object];
     }
 }
 
