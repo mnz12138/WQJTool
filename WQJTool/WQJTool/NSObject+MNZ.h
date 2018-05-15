@@ -42,4 +42,9 @@ typedef NS_ENUM(NSUInteger, OBJECTENUMFLAG) {
 /**标识obj_flag**/
 @property (nonatomic, assign) NSUInteger obj_flag;
 
+/**
+ @brief 添加一个block,当该对象释放时被调用
+ **/
+- (void)guard_addDeallocBlock:(void(^)(void))block;
+
 @end

@@ -10,6 +10,17 @@
 #import "NSString+MNZ.h"
 #import <objc/runtime.h>
 
+@interface Object_Parasite : NSObject
+@property (nonatomic, copy) void(^deallocBlock)(void);
+@end
+@implementation Object_Parasite
+- (void)dealloc {
+    if (self.deallocBlock) {
+        self.deallocBlock();
+    }
+}
+@end
+
 static const char flag_key;
 @implementation NSObject (MNZ)
 
@@ -54,6 +65,20 @@ static const char flag_key;
 
 - (NSUInteger)obj_flag {
     return [objc_getAssociatedObject(self, &flag_key) unsignedIntegerValue];
+}
+
+- (void)guard_addDeallocBlock:(void (^)(void))block {
+    @synchronized (self) {
+        static NSString *kAssociatedKey = nil;
+        NSMutableArray *parasiteList = objc_getAssociatedObject(self, &kAssociatedKey);
+        if (!parasiteList) {
+            parasiteList = [NSMutableArray new];
+            objc_setAssociatedObject(self, &kAssociatedKey, parasiteList, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+        }
+        Object_Parasite *parasite = [Object_Parasite new];
+        parasite.deallocBlock = block;
+        [parasiteList addObject: parasite];
+    }
 }
 
 @end

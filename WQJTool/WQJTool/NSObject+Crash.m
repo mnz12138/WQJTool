@@ -10,6 +10,12 @@
 #import "NSObject+MNZ.h"
 #import <objc/runtime.h>
 
+@interface Object_KVO_Info: NSObject
+
+@property (nonatomic, weak) NSObject *observer;
+
+@end
+
 @interface NSObject ()
 
 @property (nonatomic, strong) NSObject *kvoInfo;
@@ -88,7 +94,7 @@ static void addMethodForMyClass(id self, SEL _cmd) {
 
 //KVO防护
 - (void)mnz_addObserver:(NSObject *)observer forKeyPath:(NSString *)keyPath options:(NSKeyValueObservingOptions)options context:(void *)context {
-    NSObject_KVO_Info *kvoInfo = [[NSObject_KVO_Info alloc] init];
+    Object_KVO_Info *kvoInfo = [[Object_KVO_Info alloc] init];
     kvoInfo.observer = observer;
     self.kvoInfo = kvoInfo;
     [self mnz_addObserver:kvoInfo forKeyPath:keyPath options:options context:context];
@@ -112,7 +118,7 @@ static void addMethodForMyClass(id self, SEL _cmd) {
 @end
 
 
-@implementation NSObject_KVO_Info
+@implementation Object_KVO_Info
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
     if (self.observer!=nil) {

@@ -12,14 +12,3 @@
 
 @end
 
-
-@interface NSTimer_Crash_StubTarget: NSObject
-
-- (void)fireProxyTimer:(NSTimer *)timer;
-
-@property (nonatomic, weak) id target;
-@property (nonatomic, assign) SEL selector;
-@property (nonatomic, weak) NSTimer *timer;
-@property (nonatomic, strong) id userInfo;
-
-@end

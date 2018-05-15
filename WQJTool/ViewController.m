@@ -56,6 +56,9 @@
     
     DetailViewController *detailVc = [[DetailViewController alloc] init];
     [self addObserver:detailVc forKeyPath:@"name" options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld context:nil];
+    [detailVc guard_addDeallocBlock:^{
+        NSLog(@"detailVc-dealloc");
+    }];
     [self.navigationController pushViewController:detailVc animated:YES];
 }
 

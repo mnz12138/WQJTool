@@ -10,6 +10,17 @@
 #import "NSObject+MNZ.h"
 #import <objc/message.h>
 
+@interface Timer_Crash_StubTarget: NSObject
+
+- (void)fireProxyTimer:(NSTimer *)timer;
+
+@property (nonatomic, weak) id target;
+@property (nonatomic, assign) SEL selector;
+@property (nonatomic, weak) NSTimer *timer;
+@property (nonatomic, strong) id userInfo;
+
+@end
+
 @implementation NSTimer (Crash)
 
 + (void)load {
@@ -18,7 +29,7 @@
 
 + (NSTimer *)mnz_scheduledTimerWithTimeInterval:(NSTimeInterval)ti target:(id)aTarget selector:(SEL)aSelector userInfo:(id)userInfo repeats:(BOOL)yesOrNo {
     if (yesOrNo) {
-        NSTimer_Crash_StubTarget *stubTarget = [[NSTimer_Crash_StubTarget alloc] init];
+        Timer_Crash_StubTarget *stubTarget = [[Timer_Crash_StubTarget alloc] init];
         stubTarget.target = aTarget;
         stubTarget.selector = aSelector;
         stubTarget.userInfo = userInfo;
@@ -32,7 +43,7 @@
 @end
 
 
-@implementation NSTimer_Crash_StubTarget
+@implementation Timer_Crash_StubTarget
 
 - (void)fireProxyTimer:(NSTimer *)timer {
     if (self.target==nil) {
