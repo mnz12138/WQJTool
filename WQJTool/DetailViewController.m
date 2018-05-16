@@ -7,7 +7,7 @@
 //
 
 #import "DetailViewController.h"
-#import "WQJTool.h"
+//#import "WQJTool.h"
 
 @interface DetailViewController ()
 
@@ -20,10 +20,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.view.backgroundColor = [UIColor whiteColor];
-    //创建一个timer，不用自己释放timer
-    self.timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(test:) userInfo:@"123" repeats:YES];
-    [self.timer fire];
+//    self.view.backgroundColor = [UIColor whiteColor];
+//    //创建一个timer，不用自己释放timer
+//    self.timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(test:) userInfo:@"123" repeats:YES];
+//    [self.timer fire];
 }
 
 - (void)test:(NSTimer *)timer {
