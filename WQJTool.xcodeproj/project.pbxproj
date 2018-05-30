@@ -20,6 +20,7 @@
 		18449C5320A05CD800E8CCB1 /* NSDictionary+Crash.m in Sources */ = {isa = PBXBuildFile; fileRef = 18449C5220A05CD800E8CCB1 /* NSDictionary+Crash.m */; };
 		18449C5620A0602100E8CCB1 /* NSMutableArray+Crash.m in Sources */ = {isa = PBXBuildFile; fileRef = 18449C5520A0602100E8CCB1 /* NSMutableArray+Crash.m */; };
 		18449C5920A0614600E8CCB1 /* NSMutableDictionary+Crash.m in Sources */ = {isa = PBXBuildFile; fileRef = 18449C5820A0614600E8CCB1 /* NSMutableDictionary+Crash.m */; };
+		184C49E720BEB81F00F91426 /* UINavigationController+MNZ.m in Sources */ = {isa = PBXBuildFile; fileRef = 184C49E620BEB81F00F91426 /* UINavigationController+MNZ.m */; };
 		185A45E01FEB884C0043914D /* NSTimer+MNZ.m in Sources */ = {isa = PBXBuildFile; fileRef = 185A45DF1FEB884C0043914D /* NSTimer+MNZ.m */; };
 		185A45E31FEB897D0043914D /* UIAlertView+MNZ.m in Sources */ = {isa = PBXBuildFile; fileRef = 185A45E21FEB897D0043914D /* UIAlertView+MNZ.m */; };
 		185DEE101FD94EC000157419 /* UIGestureRecognizer+Block.m in Sources */ = {isa = PBXBuildFile; fileRef = 185DEE0D1FD94EBF00157419 /* UIGestureRecognizer+Block.m */; };
@@ -64,6 +65,8 @@
 		18449C5520A0602100E8CCB1 /* NSMutableArray+Crash.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+Crash.m"; sourceTree = "<group>"; };
 		18449C5720A0614600E8CCB1 /* NSMutableDictionary+Crash.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+Crash.h"; sourceTree = "<group>"; };
 		18449C5820A0614600E8CCB1 /* NSMutableDictionary+Crash.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+Crash.m"; sourceTree = "<group>"; };
+		184C49E520BEB81F00F91426 /* UINavigationController+MNZ.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+MNZ.h"; sourceTree = "<group>"; };
+		184C49E620BEB81F00F91426 /* UINavigationController+MNZ.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+MNZ.m"; sourceTree = "<group>"; };
 		185A45DE1FEB884C0043914D /* NSTimer+MNZ.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSTimer+MNZ.h"; sourceTree = "<group>"; };
 		185A45DF1FEB884C0043914D /* NSTimer+MNZ.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+MNZ.m"; sourceTree = "<group>"; };
 		185A45E11FEB897D0043914D /* UIAlertView+MNZ.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+MNZ.h"; sourceTree = "<group>"; };
@@ -146,6 +149,8 @@
 			children = (
 				18694222207A043900DB4C54 /* NSObject+JSON.h */,
 				18694223207A043900DB4C54 /* NSObject+JSON.m */,
+				184C49E520BEB81F00F91426 /* UINavigationController+MNZ.h */,
+				184C49E620BEB81F00F91426 /* UINavigationController+MNZ.m */,
 				18238C061FEA31590058F6D1 /* UIResponder+Action.h */,
 				18238C051FEA31590058F6D1 /* UIResponder+Action.m */,
 				18238C071FEA31590058F6D1 /* UITableViewCell+MNZ.h */,
@@ -283,6 +288,7 @@
 				18CA20E01FC4034E001EFFDC /* NSString+MNZ.m in Sources */,
 				18CA20DE1FC4034E001EFFDC /* NSNumber+MNZ.m in Sources */,
 				183F8E0A1FD5179600B0D4E4 /* UITableView+MNZ.m in Sources */,
+				184C49E720BEB81F00F91426 /* UINavigationController+MNZ.m in Sources */,
 				18CA20DD1FC4034E001EFFDC /* NSAttributedString+MNZ.m in Sources */,
 				185A45E01FEB884C0043914D /* NSTimer+MNZ.m in Sources */,
 				18449C5020A0492800E8CCB1 /* NSArray+Crash.m in Sources */,
