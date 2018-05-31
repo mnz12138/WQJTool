@@ -11,11 +11,17 @@
 @implementation UIViewController (MNZ)
 
 + (instancetype)getLastActivityController {
+    if ([UIApplication sharedApplication].windows.count==0) {
+        return nil;
+    }
     UIViewController *vc = [UIApplication sharedApplication].keyWindow.rootViewController;
     return [self getTopViewControllerWithVc:vc];
 }
 
 + (instancetype)getTopViewControllerWithVc:(UIViewController *)vc {
+    if (vc==nil) {
+        return nil;
+    }
     BOOL isTabBarController = [vc isKindOfClass:[UITabBarController class]];
     BOOL isNavigationController = [vc isKindOfClass:[UINavigationController class]];
     while (isTabBarController||isNavigationController) {
