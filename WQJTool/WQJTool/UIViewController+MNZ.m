@@ -12,6 +12,10 @@
 
 + (instancetype)getLastActivityController {
     UIViewController *vc = [UIApplication sharedApplication].keyWindow.rootViewController;
+    return [self getTopViewControllerWithVc:vc];
+}
+
++ (instancetype)getTopViewControllerWithVc:(UIViewController *)vc {
     BOOL isTabBarController = [vc isKindOfClass:[UITabBarController class]];
     BOOL isNavigationController = [vc isKindOfClass:[UINavigationController class]];
     while (isTabBarController||isNavigationController) {
@@ -25,7 +29,7 @@
         isTabBarController = [vc isKindOfClass:[UITabBarController class]];
         isNavigationController = [vc isKindOfClass:[UINavigationController class]];
     }
-    return [vc presentedViewController] ? [vc presentedViewController]: vc;
+    return [vc presentedViewController] ? [self getTopViewControllerWithVc:vc.presentedViewController]: vc;
 }
 
 @end
