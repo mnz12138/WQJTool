@@ -7,8 +7,29 @@
 //
 
 #import "UINavigationController+MNZ.h"
+#import "NSObject+MNZ.h"
 
 @implementation UINavigationController (MNZ)
+
++ (void)load {
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        [self swizzleMethod:@selector(preferredStatusBarStyle) andAnotherSelecor:@selector(mnz_preferredStatusBarStyle)];
+        [self swizzleMethod:@selector(pushViewController:animated:) andAnotherSelecor:@selector(mnz_pushViewController:animated:)];
+    });
+}
+
+- (UIStatusBarStyle)mnz_preferredStatusBarStyle {
+    UIStatusBarStyle style = self.visibleViewController.preferredStatusBarStyle;
+    return style;
+}
+
+- (void)mnz_pushViewController:(UIViewController *)viewController animated:(BOOL)animated {
+    if (self.viewControllers.count > 0) {
+        viewController.hidesBottomBarWhenPushed = YES ;
+    }
+    [self mnz_pushViewController:viewController animated:YES];
+}
 
 - (void)viewDidLoad {
     [self initNavigationAction];
