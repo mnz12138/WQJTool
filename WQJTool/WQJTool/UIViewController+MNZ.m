@@ -14,7 +14,7 @@
     if ([UIApplication sharedApplication].windows.count==0) {
         return nil;
     }
-    UIViewController *vc = [UIApplication sharedApplication].keyWindow.rootViewController;
+    UIViewController *vc = [UIApplication sharedApplication].delegate.window.rootViewController;
     return [self getTopViewControllerWithVc:vc];
 }
 
