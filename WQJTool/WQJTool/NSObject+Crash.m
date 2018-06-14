@@ -56,29 +56,38 @@ static void addMethodForMyClass(id self, SEL _cmd) {
 }
 //Unrecognized Selector类型crash防护，可以记录日志，便于修改bug
 - (id)mnz_forwardingTargetForSelector:(SEL)aSelector {
-    static NSUInteger index = 0;
-    static NSMutableDictionary *classDict = nil;
-    if (classDict==nil) {
-        classDict = [[NSMutableDictionary alloc] init];
+//    static NSUInteger index = 0;
+//    static NSMutableDictionary *classDict = nil;
+//    if (classDict==nil) {
+//        classDict = [[NSMutableDictionary alloc] init];
+//    }
+//    NSString *Class_Name = [NSString stringWithFormat:@"NSObject_Crash_Proxy_%ld",index];;
+//    const char *NSObject_Crash_Proxy_Name = [Class_Name UTF8String];
+//    Class MyClass = [classDict valueForKey:NSStringFromSelector(aSelector)];
+//    if (MyClass==nil) {
+//        MyClass = objc_getClass(NSObject_Crash_Proxy_Name);
+//    }
+//    if (MyClass==nil) {
+//        MyClass = objc_allocateClassPair([NSObject class], NSObject_Crash_Proxy_Name, 0);
+//        //    BOOL isSuccess = class_addIvar(MyClass, "test", sizeof(NSString *), 0, "@");
+//        // 三目运算符
+//        //    isSuccess?NSLog(@"添加变量成功"):NSLog(@"添加变量失败");
+//        class_addMethod(MyClass, aSelector, (IMP)addMethodForMyClass, "V@:");
+//        objc_registerClassPair(MyClass);
+//        index++;
+//        [classDict setObject:MyClass forKey:NSStringFromSelector(aSelector)];
+//    }
+//    id myObjc = [[MyClass alloc] init];
+//    if ([myObjc respondsToSelector:aSelector]) {
+//        return myObjc;
+//    }
+    static id myObjc = nil;
+    if (myObjc==nil) {
+        myObjc = [[NSObject alloc] init];
     }
-    NSString *Class_Name = [NSString stringWithFormat:@"NSObject_Crash_Proxy_%ld",index];;
-    const char *NSObject_Crash_Proxy_Name = [Class_Name UTF8String];
-    Class MyClass = [classDict valueForKey:NSStringFromSelector(aSelector)];
-    if (MyClass==nil) {
-        MyClass = objc_getClass(NSObject_Crash_Proxy_Name);
-    }
-    if (MyClass==nil) {
-        MyClass = objc_allocateClassPair([NSObject class], NSObject_Crash_Proxy_Name, 0);
-        //    BOOL isSuccess = class_addIvar(MyClass, "test", sizeof(NSString *), 0, "@");
-        // 三目运算符
-        //    isSuccess?NSLog(@"添加变量成功"):NSLog(@"添加变量失败");
-        class_addMethod(MyClass, aSelector, (IMP)addMethodForMyClass, "V@:");
-        objc_registerClassPair(MyClass);
-        index++;
-        [classDict setObject:MyClass forKey:NSStringFromSelector(aSelector)];
-    }
-    id myObjc = [[MyClass alloc] init];
     if ([myObjc respondsToSelector:aSelector]) {
+        return myObjc;
+    }else if (class_addMethod([myObjc class], aSelector, (IMP)addMethodForMyClass, "v@:")) {
         return myObjc;
     }
     return [self mnz_forwardingTargetForSelector:aSelector];
