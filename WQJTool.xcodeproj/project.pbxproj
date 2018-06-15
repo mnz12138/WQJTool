@@ -25,6 +25,7 @@
 		185A45E31FEB897D0043914D /* UIAlertView+MNZ.m in Sources */ = {isa = PBXBuildFile; fileRef = 185A45E21FEB897D0043914D /* UIAlertView+MNZ.m */; };
 		185DEE101FD94EC000157419 /* UIGestureRecognizer+Block.m in Sources */ = {isa = PBXBuildFile; fileRef = 185DEE0D1FD94EBF00157419 /* UIGestureRecognizer+Block.m */; };
 		185DEE111FD94EC000157419 /* UIView+ExtendTouchRect.m in Sources */ = {isa = PBXBuildFile; fileRef = 185DEE0E1FD94EC000157419 /* UIView+ExtendTouchRect.m */; };
+		18688E4D20D34E9C005CDED8 /* UIControl+Action.m in Sources */ = {isa = PBXBuildFile; fileRef = 18688E4C20D34E9C005CDED8 /* UIControl+Action.m */; };
 		18694224207A043900DB4C54 /* NSObject+JSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 18694223207A043900DB4C54 /* NSObject+JSON.m */; };
 		18CA20B41FC3F681001EFFDC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CA20B31FC3F681001EFFDC /* AppDelegate.m */; };
 		18CA20B71FC3F681001EFFDC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CA20B61FC3F681001EFFDC /* ViewController.m */; };
@@ -75,6 +76,8 @@
 		185DEE0D1FD94EBF00157419 /* UIGestureRecognizer+Block.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIGestureRecognizer+Block.m"; sourceTree = "<group>"; };
 		185DEE0E1FD94EC000157419 /* UIView+ExtendTouchRect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ExtendTouchRect.m"; sourceTree = "<group>"; };
 		185DEE0F1FD94EC000157419 /* UIGestureRecognizer+Block.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIGestureRecognizer+Block.h"; sourceTree = "<group>"; };
+		18688E4B20D34E9C005CDED8 /* UIControl+Action.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIControl+Action.h"; sourceTree = "<group>"; };
+		18688E4C20D34E9C005CDED8 /* UIControl+Action.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIControl+Action.m"; sourceTree = "<group>"; };
 		18694222207A043900DB4C54 /* NSObject+JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+JSON.h"; sourceTree = "<group>"; };
 		18694223207A043900DB4C54 /* NSObject+JSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+JSON.m"; sourceTree = "<group>"; };
 		18CA20AF1FC3F681001EFFDC /* WQJTool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WQJTool.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -153,6 +156,8 @@
 				184C49E620BEB81F00F91426 /* UINavigationController+MNZ.m */,
 				18238C061FEA31590058F6D1 /* UIResponder+Action.h */,
 				18238C051FEA31590058F6D1 /* UIResponder+Action.m */,
+				18688E4B20D34E9C005CDED8 /* UIControl+Action.h */,
+				18688E4C20D34E9C005CDED8 /* UIControl+Action.m */,
 				18238C071FEA31590058F6D1 /* UITableViewCell+MNZ.h */,
 				18238C081FEA315A0058F6D1 /* UITableViewCell+MNZ.m */,
 				18238C091FEA315A0058F6D1 /* UIViewController+MNZ.h */,
@@ -280,6 +285,7 @@
 				18238C0B1FEA315A0058F6D1 /* UIResponder+Action.m in Sources */,
 				18264D9220A01F63003173B1 /* NSNotificationCenter+Crash.m in Sources */,
 				185DEE101FD94EC000157419 /* UIGestureRecognizer+Block.m in Sources */,
+				18688E4D20D34E9C005CDED8 /* UIControl+Action.m in Sources */,
 				18449C4720A028A000E8CCB1 /* DetailViewController.m in Sources */,
 				18694224207A043900DB4C54 /* NSObject+JSON.m in Sources */,
 				18CA20B41FC3F681001EFFDC /* AppDelegate.m in Sources */,
