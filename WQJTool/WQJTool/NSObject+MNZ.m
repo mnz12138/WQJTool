@@ -21,7 +21,6 @@
 }
 @end
 
-static const char flag_key;
 @implementation NSObject (MNZ)
 
 + (void)swizzleMethod:(SEL)originalSelector andAnotherSelecor:(SEL)swizzledSelector {
@@ -59,12 +58,22 @@ static const char flag_key;
     return NO;
 }
 
+static const void *flag_key = @"flag_key";
 - (void)setObj_flag:(NSUInteger)obj_flag {
-    objc_setAssociatedObject(self, &flag_key, @(obj_flag), OBJC_ASSOCIATION_ASSIGN);
+    objc_setAssociatedObject(self, flag_key, @(obj_flag), OBJC_ASSOCIATION_ASSIGN);
 }
 
 - (NSUInteger)obj_flag {
-    return [objc_getAssociatedObject(self, &flag_key) unsignedIntegerValue];
+    return [objc_getAssociatedObject(self, flag_key) unsignedIntegerValue];
+}
+
+static const void *param_key = @"param_key";
+- (void)setParam:(NSDictionary *)param {
+    objc_setAssociatedObject(self, param_key, param, OBJC_ASSOCIATION_COPY_NONATOMIC);
+}
+
+- (NSDictionary *)param {
+    return objc_getAssociatedObject(self, param_key);
 }
 
 - (void)guard_addDeallocBlock:(void (^)(void))block {

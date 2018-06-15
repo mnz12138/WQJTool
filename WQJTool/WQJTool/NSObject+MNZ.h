@@ -41,6 +41,8 @@ typedef NS_ENUM(NSUInteger, OBJECTENUMFLAG) {
 
 /**标识obj_flag**/
 @property (nonatomic, assign) NSUInteger obj_flag;
+/**标识paramn->copy**/
+@property (nonatomic, strong) NSDictionary *param;
 
 /**
  @brief 添加一个block,当该对象释放时被调用

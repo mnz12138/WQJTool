@@ -18,6 +18,7 @@
 #import "UITableView+MNZ.h"
 #import "UITableViewCell+MNZ.h"
 #import "UIGestureRecognizer+Block.h"
+#import "UITapGestureRecognizer+Action.h"
 
 #import "NSObject+JSON.h"
 
