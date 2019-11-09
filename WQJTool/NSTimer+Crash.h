@@ -10,5 +10,7 @@
 
 @interface NSTimer (Crash)
 
++ (instancetype _Nullable )scheduledProxyTimerWithTimeInterval:(NSTimeInterval)ti target:(id _Nullable)aTarget selector:(SEL _Nullable )aSelector userInfo:(nullable id)userInfo repeats:(BOOL)yesOrNo;
+
 @end
 

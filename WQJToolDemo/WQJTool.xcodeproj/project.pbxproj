@@ -38,6 +38,7 @@
 		227EEC2A2373AA1E00708053 /* NSString+MNZ.m in Sources */ = {isa = PBXBuildFile; fileRef = 227EEC0B2373AA1E00708053 /* NSString+MNZ.m */; };
 		227EEC2B2373AA1E00708053 /* NSArray+Crash.m in Sources */ = {isa = PBXBuildFile; fileRef = 227EEC0F2373AA1E00708053 /* NSArray+Crash.m */; };
 		227EEC2C2373AA1E00708053 /* UIControl+Action.m in Sources */ = {isa = PBXBuildFile; fileRef = 227EEC102373AA1E00708053 /* UIControl+Action.m */; };
+		22D839D22376894F009D03C6 /* MNZWeakProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 22D839D12376894F009D03C6 /* MNZWeakProxy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -102,6 +103,8 @@
 		227EEC122373AA1E00708053 /* UITableViewCell+MNZ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+MNZ.h"; sourceTree = "<group>"; };
 		227EEC132373AA1E00708053 /* UIAlertView+MNZ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+MNZ.h"; sourceTree = "<group>"; };
 		227EEC142373AA1E00708053 /* NSTimer+MNZ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTimer+MNZ.h"; sourceTree = "<group>"; };
+		22D839D02376894F009D03C6 /* MNZWeakProxy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MNZWeakProxy.h; sourceTree = "<group>"; };
+		22D839D12376894F009D03C6 /* MNZWeakProxy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MNZWeakProxy.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +175,8 @@
 				227EEBF42373AA1E00708053 /* NSObject+JSON.m */,
 				227EEBF52373AA1E00708053 /* UIResponder+Action.m */,
 				227EEBF62373AA1E00708053 /* NSTimer+Crash.m */,
+				22D839D02376894F009D03C6 /* MNZWeakProxy.h */,
+				22D839D12376894F009D03C6 /* MNZWeakProxy.m */,
 				227EEBF72373AA1E00708053 /* UITableView+MNZ.m */,
 				227EEBF82373AA1E00708053 /* NSTimer+MNZ.m */,
 				227EEBF92373AA1E00708053 /* UIAlertView+MNZ.m */,
@@ -280,6 +285,7 @@
 			files = (
 				227EEC2B2373AA1E00708053 /* NSArray+Crash.m in Sources */,
 				227EEC242373AA1E00708053 /* UIView+ExtendTouchRect.m in Sources */,
+				22D839D22376894F009D03C6 /* MNZWeakProxy.m in Sources */,
 				18CA20B71FC3F681001EFFDC /* ViewController.m in Sources */,
 				18CA20C21FC3F681001EFFDC /* main.m in Sources */,
 				227EEC252373AA1E00708053 /* NSObject+Crash.m in Sources */,
