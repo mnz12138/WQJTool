@@ -51,8 +51,8 @@ static void addMethodForMyClass(id self, SEL _cmd) {
     [self swizzleMethod:@selector(forwardingTargetForSelector:) andAnotherSelecor:@selector(mnz_forwardingTargetForSelector:)];
     [self swizzleMethod:NSSelectorFromString(@"dealloc") andAnotherSelecor:@selector(mnz_dealloc)];
     
-    [self swizzleMethod:@selector(addObserver:forKeyPath:options:context:) andAnotherSelecor:@selector(mnz_addObserver:forKeyPath:options:context:)];
-    [self swizzleMethod:@selector(removeObserver:forKeyPath:) andAnotherSelecor:@selector(mnz_removeObserver:forKeyPath:)];
+//    [self swizzleMethod:@selector(addObserver:forKeyPath:options:context:) andAnotherSelecor:@selector(mnz_addObserver:forKeyPath:options:context:)];
+//    [self swizzleMethod:@selector(removeObserver:forKeyPath:) andAnotherSelecor:@selector(mnz_removeObserver:forKeyPath:)];
 }
 //Unrecognized Selector类型crash防护，可以记录日志，便于修改bug
 - (id)mnz_forwardingTargetForSelector:(SEL)aSelector {
@@ -106,13 +106,15 @@ static void addMethodForMyClass(id self, SEL _cmd) {
     Object_KVO_Info *kvoInfo = [[Object_KVO_Info alloc] init];
     kvoInfo.observer = observer;
     self.kvoInfo = kvoInfo;
-    [self mnz_addObserver:kvoInfo forKeyPath:keyPath options:options context:context];
+    [self addObserver:kvoInfo forKeyPath:keyPath options:options context:context];
+//    [self mnz_addObserver:kvoInfo forKeyPath:keyPath options:options context:context];
 }
 
 - (void)mnz_removeObserver:(NSObject *)observer forKeyPath:(NSString *)keyPath {
     //防止多次移除出现奔溃
     @try {
-        [self mnz_removeObserver:observer forKeyPath:keyPath];
+//        [self mnz_removeObserver:observer forKeyPath:keyPath];
+        [self removeObserver:observer forKeyPath:keyPath];
     } @catch (NSException *exception) {}
 }
 
