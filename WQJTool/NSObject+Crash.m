@@ -48,14 +48,14 @@ static void addMethodForMyClass(id self, SEL _cmd) {
 }
 
 + (void)load {
-    [self swizzleMethod:@selector(forwardingTargetForSelector:) andAnotherSelecor:@selector(mnz_forwardingTargetForSelector:)];
+//    [self swizzleMethod:@selector(forwardingTargetForSelector:) andAnotherSelecor:@selector(mnz_forwardingTargetForSelector:)];
     [self swizzleMethod:NSSelectorFromString(@"dealloc") andAnotherSelecor:@selector(mnz_dealloc)];
     
 //    [self swizzleMethod:@selector(addObserver:forKeyPath:options:context:) andAnotherSelecor:@selector(mnz_addObserver:forKeyPath:options:context:)];
 //    [self swizzleMethod:@selector(removeObserver:forKeyPath:) andAnotherSelecor:@selector(mnz_removeObserver:forKeyPath:)];
 }
 //Unrecognized Selector类型crash防护，可以记录日志，便于修改bug
-- (id)mnz_forwardingTargetForSelector:(SEL)aSelector {
+//- (id)mnz_forwardingTargetForSelector:(SEL)aSelector {
 //    static NSUInteger index = 0;
 //    static NSMutableDictionary *classDict = nil;
 //    if (classDict==nil) {
@@ -81,17 +81,17 @@ static void addMethodForMyClass(id self, SEL _cmd) {
 //    if ([myObjc respondsToSelector:aSelector]) {
 //        return myObjc;
 //    }
-    static id myObjc = nil;
-    if (myObjc==nil) {
-        myObjc = [[NSObject alloc] init];
-    }
-    if ([myObjc respondsToSelector:aSelector]) {
-        return myObjc;
-    }else if (class_addMethod([myObjc class], aSelector, (IMP)addMethodForMyClass, "v@:")) {
-        return myObjc;
-    }
-    return [self mnz_forwardingTargetForSelector:aSelector];
-}
+//    static id myObjc = nil;
+//    if (myObjc==nil) {
+//        myObjc = [[NSObject alloc] init];
+//    }
+//    if ([myObjc respondsToSelector:aSelector]) {
+//        return myObjc;
+//    }else if (class_addMethod([myObjc class], aSelector, (IMP)addMethodForMyClass, "v@:")) {
+//        return myObjc;
+//    }
+//    return [self mnz_forwardingTargetForSelector:aSelector];
+//}
 
 - (void)mnz_dealloc {
     //在iOS9之后，即使开发者没有移除observer，Notification crash也不会再产生了。
