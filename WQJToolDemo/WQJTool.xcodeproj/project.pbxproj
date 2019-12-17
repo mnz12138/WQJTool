@@ -24,7 +24,6 @@
 		227EEC1C2373AA1E00708053 /* NSObject+JSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 227EEBF42373AA1E00708053 /* NSObject+JSON.m */; };
 		227EEC1D2373AA1E00708053 /* UIResponder+Action.m in Sources */ = {isa = PBXBuildFile; fileRef = 227EEBF52373AA1E00708053 /* UIResponder+Action.m */; };
 		227EEC1E2373AA1E00708053 /* NSTimer+Crash.m in Sources */ = {isa = PBXBuildFile; fileRef = 227EEBF62373AA1E00708053 /* NSTimer+Crash.m */; };
-		227EEC1F2373AA1E00708053 /* UITableView+MNZ.m in Sources */ = {isa = PBXBuildFile; fileRef = 227EEBF72373AA1E00708053 /* UITableView+MNZ.m */; };
 		227EEC202373AA1E00708053 /* NSTimer+MNZ.m in Sources */ = {isa = PBXBuildFile; fileRef = 227EEBF82373AA1E00708053 /* NSTimer+MNZ.m */; };
 		227EEC212373AA1E00708053 /* UIAlertView+MNZ.m in Sources */ = {isa = PBXBuildFile; fileRef = 227EEBF92373AA1E00708053 /* UIAlertView+MNZ.m */; };
 		227EEC222373AA1E00708053 /* UITableViewCell+MNZ.m in Sources */ = {isa = PBXBuildFile; fileRef = 227EEBFA2373AA1E00708053 /* UITableViewCell+MNZ.m */; };
@@ -37,7 +36,6 @@
 		227EEC292373AA1E00708053 /* UIGestureRecognizer+Block.m in Sources */ = {isa = PBXBuildFile; fileRef = 227EEC072373AA1E00708053 /* UIGestureRecognizer+Block.m */; };
 		227EEC2A2373AA1E00708053 /* NSString+MNZ.m in Sources */ = {isa = PBXBuildFile; fileRef = 227EEC0B2373AA1E00708053 /* NSString+MNZ.m */; };
 		227EEC2B2373AA1E00708053 /* NSArray+Crash.m in Sources */ = {isa = PBXBuildFile; fileRef = 227EEC0F2373AA1E00708053 /* NSArray+Crash.m */; };
-		227EEC2C2373AA1E00708053 /* UIControl+Action.m in Sources */ = {isa = PBXBuildFile; fileRef = 227EEC102373AA1E00708053 /* UIControl+Action.m */; };
 		22D839D22376894F009D03C6 /* MNZWeakProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 22D839D12376894F009D03C6 /* MNZWeakProxy.m */; };
 /* End PBXBuildFile section */
 
@@ -65,7 +63,6 @@
 		227EEBEC2373AA1E00708053 /* UINavigationController+MNZ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+MNZ.m"; sourceTree = "<group>"; };
 		227EEBED2373AA1E00708053 /* NSAttributedString+MNZ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+MNZ.h"; sourceTree = "<group>"; };
 		227EEBEE2373AA1E00708053 /* NSObject+MNZ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MNZ.h"; sourceTree = "<group>"; };
-		227EEBEF2373AA1E00708053 /* UIControl+Action.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIControl+Action.h"; sourceTree = "<group>"; };
 		227EEBF02373AA1E00708053 /* NSArray+Crash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Crash.h"; sourceTree = "<group>"; };
 		227EEBF12373AA1E00708053 /* NSMutableDictionary+Crash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+Crash.m"; sourceTree = "<group>"; };
 		227EEBF22373AA1E00708053 /* NSMutableArray+Crash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+Crash.m"; sourceTree = "<group>"; };
@@ -73,7 +70,6 @@
 		227EEBF42373AA1E00708053 /* NSObject+JSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+JSON.m"; sourceTree = "<group>"; };
 		227EEBF52373AA1E00708053 /* UIResponder+Action.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIResponder+Action.m"; sourceTree = "<group>"; };
 		227EEBF62373AA1E00708053 /* NSTimer+Crash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+Crash.m"; sourceTree = "<group>"; };
-		227EEBF72373AA1E00708053 /* UITableView+MNZ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+MNZ.m"; sourceTree = "<group>"; };
 		227EEBF82373AA1E00708053 /* NSTimer+MNZ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+MNZ.m"; sourceTree = "<group>"; };
 		227EEBF92373AA1E00708053 /* UIAlertView+MNZ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+MNZ.m"; sourceTree = "<group>"; };
 		227EEBFA2373AA1E00708053 /* UITableViewCell+MNZ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+MNZ.m"; sourceTree = "<group>"; };
@@ -90,7 +86,6 @@
 		227EEC052373AA1E00708053 /* NSDictionary+Crash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Crash.h"; sourceTree = "<group>"; };
 		227EEC062373AA1E00708053 /* UIView+Crash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Crash.m"; sourceTree = "<group>"; };
 		227EEC072373AA1E00708053 /* UIGestureRecognizer+Block.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIGestureRecognizer+Block.m"; sourceTree = "<group>"; };
-		227EEC082373AA1E00708053 /* UITableView+MNZ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+MNZ.h"; sourceTree = "<group>"; };
 		227EEC092373AA1E00708053 /* NSTimer+Crash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTimer+Crash.h"; sourceTree = "<group>"; };
 		227EEC0A2373AA1E00708053 /* UIResponder+Action.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIResponder+Action.h"; sourceTree = "<group>"; };
 		227EEC0B2373AA1E00708053 /* NSString+MNZ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MNZ.m"; sourceTree = "<group>"; };
@@ -98,7 +93,6 @@
 		227EEC0D2373AA1E00708053 /* NSMutableDictionary+Crash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+Crash.h"; sourceTree = "<group>"; };
 		227EEC0E2373AA1E00708053 /* NSMutableArray+Crash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+Crash.h"; sourceTree = "<group>"; };
 		227EEC0F2373AA1E00708053 /* NSArray+Crash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Crash.m"; sourceTree = "<group>"; };
-		227EEC102373AA1E00708053 /* UIControl+Action.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIControl+Action.m"; sourceTree = "<group>"; };
 		227EEC112373AA1E00708053 /* UIViewController+MNZ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+MNZ.h"; sourceTree = "<group>"; };
 		227EEC122373AA1E00708053 /* UITableViewCell+MNZ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+MNZ.h"; sourceTree = "<group>"; };
 		227EEC132373AA1E00708053 /* UIAlertView+MNZ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+MNZ.h"; sourceTree = "<group>"; };
@@ -167,7 +161,6 @@
 				227EEBEC2373AA1E00708053 /* UINavigationController+MNZ.m */,
 				227EEBED2373AA1E00708053 /* NSAttributedString+MNZ.h */,
 				227EEBEE2373AA1E00708053 /* NSObject+MNZ.h */,
-				227EEBEF2373AA1E00708053 /* UIControl+Action.h */,
 				227EEBF02373AA1E00708053 /* NSArray+Crash.h */,
 				227EEBF12373AA1E00708053 /* NSMutableDictionary+Crash.m */,
 				227EEBF22373AA1E00708053 /* NSMutableArray+Crash.m */,
@@ -177,7 +170,6 @@
 				227EEBF62373AA1E00708053 /* NSTimer+Crash.m */,
 				22D839D02376894F009D03C6 /* MNZWeakProxy.h */,
 				22D839D12376894F009D03C6 /* MNZWeakProxy.m */,
-				227EEBF72373AA1E00708053 /* UITableView+MNZ.m */,
 				227EEBF82373AA1E00708053 /* NSTimer+MNZ.m */,
 				227EEBF92373AA1E00708053 /* UIAlertView+MNZ.m */,
 				227EEBFA2373AA1E00708053 /* UITableViewCell+MNZ.m */,
@@ -194,7 +186,6 @@
 				227EEC052373AA1E00708053 /* NSDictionary+Crash.h */,
 				227EEC062373AA1E00708053 /* UIView+Crash.m */,
 				227EEC072373AA1E00708053 /* UIGestureRecognizer+Block.m */,
-				227EEC082373AA1E00708053 /* UITableView+MNZ.h */,
 				227EEC092373AA1E00708053 /* NSTimer+Crash.h */,
 				227EEC0A2373AA1E00708053 /* UIResponder+Action.h */,
 				227EEC0B2373AA1E00708053 /* NSString+MNZ.m */,
@@ -202,7 +193,6 @@
 				227EEC0D2373AA1E00708053 /* NSMutableDictionary+Crash.h */,
 				227EEC0E2373AA1E00708053 /* NSMutableArray+Crash.h */,
 				227EEC0F2373AA1E00708053 /* NSArray+Crash.m */,
-				227EEC102373AA1E00708053 /* UIControl+Action.m */,
 				227EEC112373AA1E00708053 /* UIViewController+MNZ.h */,
 				227EEC122373AA1E00708053 /* UITableViewCell+MNZ.h */,
 				227EEC132373AA1E00708053 /* UIAlertView+MNZ.h */,
@@ -290,7 +280,6 @@
 				18CA20C21FC3F681001EFFDC /* main.m in Sources */,
 				227EEC252373AA1E00708053 /* NSObject+Crash.m in Sources */,
 				227EEC292373AA1E00708053 /* UIGestureRecognizer+Block.m in Sources */,
-				227EEC1F2373AA1E00708053 /* UITableView+MNZ.m in Sources */,
 				227EEC272373AA1E00708053 /* NSObject+MNZ.m in Sources */,
 				227EEC282373AA1E00708053 /* UIView+Crash.m in Sources */,
 				227EEC182373AA1E00708053 /* NSDictionary+Crash.m in Sources */,
@@ -305,7 +294,6 @@
 				227EEC202373AA1E00708053 /* NSTimer+MNZ.m in Sources */,
 				227EEC262373AA1E00708053 /* NSAttributedString+MNZ.m in Sources */,
 				227EEC152373AA1E00708053 /* NSNumber+MNZ.m in Sources */,
-				227EEC2C2373AA1E00708053 /* UIControl+Action.m in Sources */,
 				227EEC1E2373AA1E00708053 /* NSTimer+Crash.m in Sources */,
 				227EEC192373AA1E00708053 /* UINavigationController+MNZ.m in Sources */,
 				18CA20B41FC3F681001EFFDC /* AppDelegate.m in Sources */,
