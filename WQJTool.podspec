@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "WQJTool"
-  s.version      = "0.3.4"
+  s.version      = "0.3.5"
   s.summary      = "iOS常用工具类."
 
   # This description is used to generate tags and improve search results.

@@ -26,16 +26,17 @@
 
 - (void)mnz_pushViewController:(UIViewController *)viewController animated:(BOOL)animated {
     if (self.viewControllers.count > 0) {
-        viewController.hidesBottomBarWhenPushed = YES ;
+        viewController.hidesBottomBarWhenPushed = YES;
     }
     [self mnz_pushViewController:viewController animated:YES];
 }
 
 - (void)viewDidLoad {
-    [self initNavigationAction];
+    [super viewDidLoad];
+    
 }
 
-- (void)initNavigationAction {
+- (void)setupFullScreenPopGesture {
     //设全屏启动右滑返回手势，此处可以优化为iPad 上支持全屏
     id target = self.interactivePopGestureRecognizer.delegate;
     SEL handler = NSSelectorFromString(@"handleNavigationTransition:");

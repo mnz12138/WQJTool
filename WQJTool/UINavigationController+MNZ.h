@@ -10,4 +10,7 @@
 
 @interface UINavigationController (MNZ) <UIGestureRecognizerDelegate>
 
+/// 设全屏右滑返回手势,关闭系统返回手势
+- (void)setupFullScreenPopGesture;
+
 @end
