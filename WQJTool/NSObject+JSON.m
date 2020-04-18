@@ -62,6 +62,7 @@
                 break;
             }
         }
+        free(members);
     }else if ([value isKindOfClass:[NSArray class]]) {
         NSDictionary *dict = [[self class] mnz_objectClassInArray];
         Class class = nil;
@@ -100,6 +101,7 @@
                 break;
             }
         }
+        free(members);
     }else{
         [self mnz_setValue:value forKey:key];
     }
